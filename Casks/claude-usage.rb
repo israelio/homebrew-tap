@@ -17,12 +17,11 @@ cask "claude-usage" do
 
   app "Claude Usage.app"
 
-  # Start the app right after installing so the menu bar item appears (no-op if it can't be opened, e.g. over SSH).
-  postflight do
-    system_command "/usr/bin/open",
-                   args:         ["-a", "#{appdir}/Claude Usage.app"],
-                   must_succeed: false
-  end
+  caveats <<~EOS
+    Start Claude Usage with:
+      open -a "Claude Usage"
+    or open it from the Applications folder or Launchpad. It lives in the menu bar: click the usage label to open the panel.
+  EOS
 
   zap trash: [
     "~/Library/Application Support/ClaudeUsageWidget",
