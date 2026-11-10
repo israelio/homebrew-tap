@@ -1,6 +1,6 @@
 cask "claude-usage" do
-  version "0.1.11"
-  sha256 "f432a2d598ea90c77e09ea14c82830d00cdc0f45d5d03181c6fa3ce2d6068503"
+  version "0.1.12"
+  sha256 "96476dc0accb8ac6b92eefd03950addd3bb0533929155c4550b4bbedf29d143b"
 
   url "https://github.com/israelio/claude-usage-widget/releases/download/v#{version}/ClaudeUsage-#{version}.dmg"
   name "Claude Usage"
